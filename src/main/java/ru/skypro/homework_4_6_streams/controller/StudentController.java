@@ -121,7 +121,7 @@ public class StudentController {
         return ResponseEntity.ok(averageAge);
     }
 
-    @GetMapping("/получение студентов, у которых имена начинаются с буквы/{letter}")
+    @GetMapping("/getting-students-whose-names-begin-with-the-letter/{letter}")
     @Operation(summary = "Получение студентов по первой букве")
     public Stream<Student> getStudentsWithNameStartsWithLetter(@PathVariable Character letter) {
         return service.findStudentByNameWithInitial_(letter);
